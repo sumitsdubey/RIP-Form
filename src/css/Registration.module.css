@@ -1,0 +1,212 @@
+.reg{
+
+    width: 100%;
+    background: url('../images/img.gif');
+    font-family: "League Spartan", sans-serif;
+    
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #020016cc;
+    padding-top: 1rem;
+}
+.top h1{
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+.bottom{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+}
+.bottom .img{
+    width: 45%;
+}
+.bottom .img img{
+    width: 100%;
+}
+
+
+.registration_form{
+width: 30rem;
+max-width: 50%;
+background: #08061C;
+padding: 2.5rem;
+border: 1px  solid #ffffff34;
+border-radius: 5px;
+}
+.form_group{
+    background-color: transparent;
+}
+
+.form_group label{
+    display: block;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.form_group input, .form_group select{
+    width: 100%;
+    background-color: #ffffff0e;
+    outline: none;
+    border: 1px solid #ffffff34;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+.form_group select option{
+    background: black;
+}
+.form_group input{
+    width: 95%;
+}
+.form_group_inline{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+.form_group_inline .form_group{
+    flex: 1;
+}
+
+.btn_submit{
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background: linear-gradient(to right, #1053DC, #319AD6);
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.inquiry{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.inquiry p{
+    color: white;
+    background: #ffffff23;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.resend_otp{
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.btn_resend{
+    border-bottom: 1px solid #ffffff91;
+    background: none;
+    color: white;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.553);
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.otp_heading{
+    color: white;
+    text-align: center;
+    font-size: 2.4rem;
+}
+.para_otpsent{
+    color: #ffffff91;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.otp_input_group{
+    margin: 5rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.otp_input_group input{
+    width: 3rem;
+    height: 3rem;
+    background: #ffffff0c;
+    border: 1px solid #ffffff38;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 0.5rem; 
+}
+.btn_edit_email{
+
+    background: #ffffff00;
+    border: none;
+
+}
+@media (max-width: 800px) {
+    .bottom{
+        display: block;
+    }
+
+
+    .bottom .img{
+        width: 100%;
+    }
+    .registration_form{
+        width: 70%;
+        max-width: 80% !important;
+        margin: 0 auto;
+        margin-top: -4rem !important;
+    }
+
+    .form_group_inline{
+        display: block;
+    }
+}
+/* @media (max-width: 766px) {
+    .registration_form {
+        width: 70%;
+        max-width: 80% !important;
+        margin: 0 auto;
+        margin-top: -4rem !important;
+    }
+} */
+
+@media (max-width: 499px) {
+    .otp_input_group {
+        margin: 2rem 0;
+        width: 100%;
+        justify-content: center; 
+    }
+
+    .otp_input_group input {
+        width: 2.5rem; 
+        height: 2.5rem; 
+        margin: 0 0.25rem; 
+    }
+
+    .inquiry p {
+        font-size: 0.8rem;
+    }
+
+    .top h1 {
+        font-size: 1.8rem;
+    }
+
+    .otp_heading {
+        font-size: 1.5rem;
+    }
+    .btn_edit_email:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; 
+      }
+}
