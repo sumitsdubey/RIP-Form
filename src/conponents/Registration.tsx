@@ -94,7 +94,6 @@ function Registration() {
         });
     
     }
-    setForm(false);
   };
   // end of calling register
 
