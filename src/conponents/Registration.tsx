@@ -12,8 +12,8 @@ const siteKey = '6LcZhjYqAAAAAGYKhqjBFDqYtbQXWP7Gh3ddI1cr';
 
 function Registration() {
   const [form, setForm] = useState(true);
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-  const [otpcaptchaToken, setotpCaptchaToken] = useState<string | null>(null);
+  // const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  // const [otpcaptchaToken, setotpCaptchaToken] = useState<string | null>(null);
   const [email, setEmail] = useState<string>(''); // State to store the email
   const recaptchaRef = useRef<ReCAPTCHA | null>(null);
   const recaptchaRefotp = useRef<ReCAPTCHA | null>(null);
@@ -40,8 +40,8 @@ function Registration() {
 
   // Handle reCAPTCHA token
   const handleRecaptcha = (token: string | null) => {
-    console.log('reCAPTCHA token:', token);
-    setCaptchaToken(token);
+    // console.log('reCAPTCHA token:');
+    // setCaptchaToken(token);
     // Proceed to handle form submission only if token is not null
     if (token) {
       handleFormSubmit(token);
@@ -63,7 +63,7 @@ function Registration() {
   const handleFormSubmit = async (token: string) => {
     const emailInput = (document.getElementById("college_email") as HTMLInputElement).value;
     setEmail(emailInput); // Update email state
-    console.log('Submitting form with token:', token);
+    console.log('Submitting form with token:');
 
     try {
       const response = await fetch('http://13.126.250.226:8000/register/', {
@@ -99,8 +99,8 @@ function Registration() {
   // end of calling register
 
   const handleRecaptchaotpResend = (token_resend: string | null) => {
-    console.log('reCAPTCHA token:', token_resend);
-    setotpCaptchaToken(token_resend);
+    // console.log('reCAPTCHA token:');
+    // setotpCaptchaToken(token_resend);
     // Proceed to handle form submission only if token is not null
     if (token_resend) {
       handleOtpResend(email, token_resend);
@@ -118,7 +118,7 @@ function Registration() {
 
   //handle otp resend 
   const handleOtpResend = async (email: string, token_resend: string) => {
-    console.log('Submitting form with email:', token_resend);
+    console.log('Submitting form with email:');
 
     try {
       const response = await fetch('http://13.126.250.226:8000/register/', {
@@ -177,8 +177,8 @@ function Registration() {
 
   // Handle reCAPTCHA token
   const handleRecaptchaotp = (token_email: string | null) => {
-    console.log('reCAPTCHA token:', token_email);
-    setotpCaptchaToken(token_email);
+    // console.log('reCAPTCHA token:');
+    // setotpCaptchaToken(token_email);
     // Proceed to handle form submission only if token is not null
     if (token_email) {
       handleOtpSubmit(token_email);
@@ -287,7 +287,7 @@ function Registration() {
 
           {form ? (
             <div className={`${styles.registration_form}`}>
-              <form onSubmit={triggerRecaptcha}>
+              <form onSubmit={triggerRecaptcha} className='reg_form'>
                 <div className={`${styles.form_group}`}>
                   <label htmlFor="name">Name</label>
                   <input type="text" id="name" value={name}
